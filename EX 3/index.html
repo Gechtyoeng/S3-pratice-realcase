@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox Pricing Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Sono", sans-serif;
+        background-color: antiquewhite;
+      }
+      .pricing-container{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+        justify-content: space-evenly;
+        
+      }
+      .pricing-plan{
+        border: solid 0.1em none;
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        border-radius: 2rem;
+
+      }
+      .plan-title, .plan-price, .plan-features{
+        width: 100%;
+      }
+      .plan-title{
+        text-transform: uppercase;
+        background-image: linear-gradient(to right, rgb(119, 204, 215) , rgb(11, 111, 193));
+        text-align: center;
+        padding: 1rem 0;
+        font-size: 1.5em;
+        color: white;
+        border-top-right-radius: 2rem;
+      }
+      .plan-price{
+        text-align: center;
+        padding: 1rem 0;
+        color: rgb(119, 204, 215);
+      }
+      .number{
+        font-size: 2em;
+      }
+      .plan-features{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 0 1.5em;
+        color: gainsboro;
+      }
+      li{
+        width: 100%;
+        margin-bottom: 1em;
+        border-bottom: solid 1px gainsboro;
+      }
+      .plan-button{
+          padding: 0.5rem 1rem;
+          margin: 2rem 0;
+          border-radius: 2em;
+          background-image: linear-gradient(to right, rgb(119, 204, 215) , rgb(55, 147, 221));
+          border-style: none;
+          color: white;
+          text-transform: uppercase;
+      }
+      /* Hint: What can you do with a media query and flexbox? */
+      @media (max-width: 1250px) {
+        
+        .pricing-container{
+          display: flex;
+          flex-direction: column;
+          height: 100vh;
+          align-content: space-around;
+          
+        }
+        .pricing-plan{
+          width: 70%;
+          margin-top: 2rem;
+          /* background-color: red; */
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="pricing-container">
+      <div class="pricing-plan">
+        <div class="plan-title">Basic</div>
+        <div class="plan-price"><sup>$</sup><span class="number">9.99</span>/month</div>
+        <ul class="plan-features">
+          <li> 10GB Storage</li>
+          <li> 1 User</li>
+          <li> Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+      <div class="pricing-plan">
+        <div class="plan-title">Standard</div>
+        <div class="plan-price"><sup>$</sup><span class="number">19.99</span>/month</div>
+        <ul class="plan-features">
+          <li> 50GB Storage</li>
+          <li> 5 Users</li>
+          <li> Phone & Email Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+      <div class="pricing-plan">
+        <div class="plan-title">Premium</div>
+        <div class="plan-price"><sup>$</sup><span class="number">49.99</span>/month</div>
+        <ul class="plan-features">
+          <li> 100GB Storage</li>
+          <li> 10 Users</li>
+          <li> 24/7 Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+    </div>
+  </body>
+</html>
